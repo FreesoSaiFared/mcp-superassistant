@@ -204,6 +204,11 @@ export class McpClient extends EventEmitter<AllEvents> {
       await Promise.race([connectionPromise, timeoutPromise]);
       console.log(`[McpClient] MCP client connected successfully`);
 
+      // Add a small delay to allow the SSE stream to stabilize before proceeding
+      // This helps prevent race conditions on slower connections or background startups
+      await new Promise(resolve => setTimeout(resolve, 500));
+      console.log(`[McpClient] Stabilization delay complete`);
+
       // Store connection state
       this.activePlugin = plugin;
       this.activeTransport = transport;
