@@ -1,0 +1,49 @@
+{
+  "autoConfirmCommands": true,
+  "trustedCommands": [
+    "git",
+    "pnpm",
+    "npm",
+    "bash",
+    "node",
+    "mkdir",
+    "touch",
+    "cp",
+    "mv",
+    "ls",
+    "cat",
+    "echo",
+    "cd",
+    "pwd",
+    "find",
+    "grep",
+    "sed",
+    "awk",
+    "sort",
+    "uniq",
+    "head",
+    "tail",
+    "wc",
+    "tsc",
+    "vite",
+    "turbo",
+    "eslint",
+    "prettier",
+    "rimraf",
+    "cross-env"
+  ],
+  "autoConfirmPaths": [
+    "/home/ned/FreesoSaiFared/mcp-superassistant-enhanced-proxy",
+    "/home/ned/llimux"
+  ],
+  "skipConfirmationFor": {
+    "git": ["add", "commit", "push", "pull", "checkout", "branch", "status", "log"],
+    "pnpm": ["install", "build", "dev", "test", "lint", "type-check", "clean"],
+    "bash": ["bash-scripts/*.sh"],
+    "node": ["*.js", "*.ts", "*.mjs"],
+    "mkdir": ["-p"],
+    "touch": ["*.md", "*.ts", "*.js", "*.json", "*.yml", "*.yaml"]
+  },
+  "developmentMode": true,
+  "enableVerboseLogging": false
+}

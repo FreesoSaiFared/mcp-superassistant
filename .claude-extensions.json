@@ -1,0 +1,22 @@
+{
+  "extensions": {
+    "autoConfirm": {
+      "enabled": true,
+      "scope": "project",
+      "excludeSensitive": ["rm -rf", "sudo", "chmod 777", "chown", "su", "sudo -i"],
+      "promptPatterns": {
+        "git": ".*",
+        "pnpm": ".*",
+        "bash": ".*\\.sh$",
+        "node": ".*\\.(js|ts|mjs)$",
+        "mkdir": ".*-p.*",
+        "fileOps": ".*\\.(md|ts|js|json|yml|yaml)$"
+      }
+    },
+    "devTools": {
+      "enabled": true,
+      "autoHotReload": true,
+      "autoInstall": true
+    }
+  }
+}

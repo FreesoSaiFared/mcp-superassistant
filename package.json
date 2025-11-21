@@ -1,7 +1,7 @@
 {
   "name": "mcp-superassistant",
-  "version": "0.5.8",
-  "description": "MCP SuperAssistant",
+  "version": "0.6.0",
+  "description": "MCP SuperAssistant - Enhanced Multi-Transport Proxy & Universal AI Integration",
   "license": "MIT",
   "private": true,
   "sideEffects": false,
@@ -36,7 +36,21 @@
     "copy_env": "bash bash-scripts/copy_env.sh",
     "set-global-env": "bash bash-scripts/set_global_env.sh",
     "postinstall": "pnpm build:eslint && pnpm copy_env",
-    "module-manager": "pnpm -F module-manager start"
+    "module-manager": "pnpm -F module-manager start",
+
+    "proxy:dev": "pnpm -F @extension/mcp-proxy dev",
+    "proxy:build": "pnpm -F @extension/mcp-proxy build",
+    "proxy:start": "pnpm -F @extension/mcp-proxy start",
+    "proxy:watch": "pnpm -F @extension/mcp-proxy watch",
+
+    "claude-plugin:build": "pnpm -F claude-plugin build",
+    "claude-plugin:dev": "pnpm -F claude-plugin dev",
+    "claude-plugin:test": "pnpm -F claude-plugin test",
+
+    "test:unit": "turbo test",
+    "test:integration": "turbo test:integration",
+    "test:e2e": "turbo test:e2e",
+    "benchmark": "pnpm -F @extension/mcp-proxy benchmark"
   },
   "dependencies": {
     "react": "19.1.0",

@@ -1,0 +1,68 @@
+{
+  "name": "@extension/mcp-proxy",
+  "version": "0.6.0",
+  "description": "Enhanced Multi-Transport MCP Proxy with Dynamic Server Discovery",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-superassistant-proxy": "dist/cli.js"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "watch": "tsx watch src/cli.ts",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:integration": "vitest --config vitest.integration.config.ts",
+    "benchmark": "node --experimental-modules dist/benchmark.js",
+    "lint": "eslint src --ext .ts --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.1",
+    "express": "^4.21.2",
+    "ws": "^8.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.3",
+    "uuid": "^11.1.0",
+    "yargs": "^17.7.2",
+    "zod": "^3.24.4",
+    "chokidar": "^4.0.1",
+    "node-cron": "^3.0.3",
+    "ioredis": "^5.4.1",
+    "winston": "^3.17.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/ws": "^8.18.1",
+    "@types/cors": "^2.8.18",
+    "@types/body-parser": "^1.19.5",
+    "@types/uuid": "^10.0.0",
+    "@types/yargs": "^17.0.33",
+    "@types/node": "^22.15.18",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^2.1.8",
+    "@vitest/coverage-v8": "^2.1.8",
+    "benchmark": "^2.1.4",
+    "@types/benchmark": "^2.1.5"
+  },
+  "keywords": [
+    "mcp",
+    "proxy",
+    "multi-transport",
+    "sse",
+    "websocket",
+    "stdio",
+    "model-context-protocol",
+    "ai",
+    "automation"
+  ],
+  "author": "MCP SuperAssistant Team",
+  "license": "MIT"
+}
